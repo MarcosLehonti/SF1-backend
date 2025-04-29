@@ -19,6 +19,15 @@ require('dotenv').config();
 
 const app = express();
 
+// 🔵 PRIMERO: configurar CORS bien
+app.use(cors({
+    origin: 'https://sf-1-fronted.vercel.app',
+    credentials: true
+  }));
+  
+  // Luego parsear JSON
+
+
 app.use(express.json());
 app.use(cors());
 

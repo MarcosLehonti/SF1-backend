@@ -123,10 +123,12 @@ const server = http.createServer(app);
 // Configurar Socket.IO con CORS abierto (ajustar en producción)
 const io = new Server(server, {
     cors: {
-        origin: "*",
-        methods: ["GET", "POST"]
+      origin: 'https://sf-1-fronted.vercel.app',
+      methods: ['GET', 'POST'],
+      credentials: true
     }
-});
+  });
+  
 
 // Almacén de datos por sala
 const roomCodes = {};        // Para el editor de código
