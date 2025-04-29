@@ -10,6 +10,7 @@ const User = require('./models/User'); // importa modelo para sincronización
 const authMiddleware = require('./middleware/authMiddleware');
 const authorize = require('./middleware/authorize');
 const logRoutes = require('./routes/LogRoutes');
+const projectRoutes = require('./routes/projectRoutes');
 
 
 
@@ -25,6 +26,8 @@ app.use(cors());
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/logs', logRoutes);
+app.use('/api/projects', projectRoutes);
+
 
 
   

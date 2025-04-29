@@ -27,5 +27,12 @@ const User = sequelize.define('User', {
     timestamps: true,
 });
 
+User.associate = (models) => {
+    User.hasMany(models.Project, {
+        foreignKey: 'userId',
+        as: 'projects',
+    });
+};
+
 
 module.exports = User;
